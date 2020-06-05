@@ -62,6 +62,7 @@ const ImageContainer = styled.div`
     top: 50%;
     transform: translateY(-50%); */
     max-height: 640px;
+    overflow: hidden;
 
     .gatsby-image-wrapper {
       width: 300px;   
