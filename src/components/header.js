@@ -1,34 +1,16 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+import MobileMenu from "./Nav/mobile-menu"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = ({ siteTitle, resetCurrent }) => (
+  <HeaderStyled>
+    <h1>
+      <Link to="/" onClick={resetCurrent} > {siteTitle} </Link>
+    </h1>
+    <MobileMenu />
+  </HeaderStyled>
 )
 
 Header.propTypes = {
@@ -40,3 +22,34 @@ Header.defaultProps = {
 }
 
 export default Header
+
+const HeaderStyled = styled.header`
+  /* padding-top: 80px;
+  padding-bottom: 32px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  @media screen and (min-width: 600px) {
+    margin-bottom: 80px;
+  }
+
+  h1 { 
+    font-size: 15px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Anaheim";
+    z-index: 12;
+    a {
+      color: #424141;
+      text-decoration: none;
+      
+      transition: opacity 0.24 ease-in;
+
+      &:hover {
+          opacity: 0.8;
+      }
+    }
+  }
+`
