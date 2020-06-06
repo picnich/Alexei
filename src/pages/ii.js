@@ -5,7 +5,7 @@ import Layout from "../components/Layouts/layout"
 import SEO from "../components/seo"
 import Gallery from "../components/Gallery"
 import ImageCarousel from "../components/Gallery/ImageCarousel"
-
+import MobileGallery from "../components/Gallery/mobileGallery"
 
 const II = ({ data }) => {
     const { contentfulGallery } = data;
@@ -32,6 +32,7 @@ const II = ({ data }) => {
             resetCurrent={() => setImg(0)}
             >
             <SEO title="II" />
+            <MobileGallery items={images} />
             {
                 isThumbnail ? (
                 <Gallery 

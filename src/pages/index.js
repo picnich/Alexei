@@ -1,24 +1,16 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layouts/layout"
 import SEO from "../components/seo"
 import Gallery from "../components/Gallery"
 import ImageCarousel from "../components/Gallery/ImageCarousel"
+import MobileGallery from "../components/Gallery/mobileGallery"
 
 const IndexPage = ({ data }) => {
-  // const Imgs = new Array(20).fill('');
   const { contentfulGallery } = data;
   const { coverImage, images } = contentfulGallery;
-  // console.log(coverImage, images);
-  // const Imgs = [
-  //   "https://images.unsplash.com/photo-1587613980697-aaf1a97de24c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  //   "https://images.unsplash.com/photo-1590845487056-6d1994992c46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  //   "https://images.unsplash.com/photo-1590767602124-234d1714ed92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  //   "https://images.unsplash.com/photo-1590931743459-ae6695ba1fe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  //   "https://images.unsplash.com/photo-1590934185846-5686f59fd782?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-  //   "https://images.unsplash.com/photo-1590818048709-2d2d042a5aff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-  // ]
+
   const [currentImg, setImg] = useState(0);
   const [isThumbnail, setThumbnail] = useState(false);
 
@@ -39,8 +31,7 @@ const IndexPage = ({ data }) => {
       resetCurrent={() => setImg(0)}
     >
       <SEO title="Home" />
-      {/* <h2>{currentImg }/{Imgs.length}</h2>
-      <h2>{isThumbnail ? "yes" : "no"}</h2> */}
+      <MobileGallery items={images} />
       {
         isThumbnail ? (
           <Gallery 

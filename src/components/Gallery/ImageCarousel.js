@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 const ImageCarousel = ({ current, handleNext, handlePrevious }) => {
     return (
-        <Container2 className="imageCarousel">
+        <Container className="imageCarousel">
             <Next onClick={handleNext} />
             <Previous onClick={handlePrevious}/>
             <ImageContainer>
@@ -20,7 +20,7 @@ const ImageCarousel = ({ current, handleNext, handlePrevious }) => {
 
                 />
             </ImageContainer>
-        </Container2>
+        </Container>
     )
 }
 
@@ -49,13 +49,14 @@ export default ImageCarousel;
 //     } */
 // `
 
-const Container2 = styled.div`
-    /* position: relative;
-    max-width: 80%;
-    margin-right: auto;
-    top: 50%;
-    transform: translateY(-50%); */
+const Container = styled.div`
+
     position: relative;
+    display: none;
+    
+    @media screen and (min-width: 600px ) {
+        display: block;
+    }
 `
 const ImageContainer = styled.div`
     /* position: relative;
