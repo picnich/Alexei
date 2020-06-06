@@ -8,8 +8,6 @@ const MobileGallery = ({ items }) => {
             {
                 items.map( (item, i) => (
                     <GalleryItem key={i} >
-                        {/* <img src={item} /> */}
-                        {/* <p>{item.fluid.src}</p> */}
                         <Img 
                             key={item.fluid.src}
                             fluid={item.fluid}

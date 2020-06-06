@@ -32,7 +32,7 @@ export default Gallery;
 
 const GalleryContainer = styled.div`
     height: 100%;
-    display: none;
+    display: grid;
     /* grid-template-columns: repeat(3, 220px); */
     width: 100%;
     justify-content: center;
@@ -49,10 +49,9 @@ const GalleryContainer = styled.div`
     @media screen and (min-width: 948px) {
         grid-template-columns: repeat(3, 180px);
     }
-    @media screen and (min-width: 600px ) {
-        display: block;
+    @media screen and (max-width: 600px) {
+        display: none;
     }
-
 `
 
 const GalleryItem = styled.div`
