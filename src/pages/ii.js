@@ -43,6 +43,7 @@ const II = ({ data }) => {
                     setThumbnail(false);
                     }}
                     isThumbnail={isThumbnail}
+                    isSinglePage={false}
                 />
                 ) : (
                 <ImageCarousel 
