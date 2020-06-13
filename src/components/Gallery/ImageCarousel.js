@@ -26,31 +26,7 @@ const ImageCarousel = ({ current, handleNext, handlePrevious, isDouble }) => {
 
 export default ImageCarousel;
 
-// const Container = styled.div`
-//     height: 100%;
-//     width: 100%;
-//     /* display: flex; */
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-
-//     max-width: 60vh;
-//     background: red;
-//     border: 1px solid purple;
-//     margin-left: auto;
-//     margin-right: auto;
-
-//     /* img {
-//         max-height: 65vh;
-//         width: auto;
-//         margin-left: auto;
-//         margin-right: auto;
-//         display: block;
-//     } */
-// `
-
 const Container = styled.div`
-
     position: relative;
     display: none;
     

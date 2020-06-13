@@ -3,11 +3,11 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Gallery = ({ items, current, handleClick, isThumbnail, isSinglePage }) => {
-    const removedItems = items.slice(1);
+    // const removedItems = items.slice(1);
     return (
         <GalleryContainer isThumbnail={isThumbnail} isSinglePage={isSinglePage} >
             {
-                removedItems.map( (item, i) => (
+                items.map( (item, i) => (
                     isSinglePage ? (
                         <GalleryItemSingle 
                             key={i} 
@@ -72,6 +72,9 @@ const GalleryContainer = styled.div`
 `
 
 const GalleryItemSingle = styled.div`
+    &:nth-child(1) {
+        display: none;
+    }
     width: 100%;
     height: 120px;
     overflow: hidden;
@@ -137,6 +140,9 @@ const GalleryItemSingle = styled.div`
 `
 
 const GalleryItemDouble = styled.div`
+    &:nth-child(1) {
+        display: none;
+    }
     width: 100%;
     height: 120px;
     overflow: hidden;
