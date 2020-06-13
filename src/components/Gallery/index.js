@@ -7,7 +7,7 @@ const Gallery = ({ items, current, handleClick, isThumbnail, isSinglePage }) => 
     return (
         <GalleryContainer isThumbnail={isThumbnail} isSinglePage={isSinglePage} >
             {
-                removedItems.map( (item, i) => (
+                items.map( (item, i) => (
                     isSinglePage ? (
                         <GalleryItemSingle 
                             key={i} 
