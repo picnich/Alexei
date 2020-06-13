@@ -3,10 +3,11 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Gallery = ({ items, current, handleClick, isThumbnail, isSinglePage }) => {
+    const removedItems = items.splice(0,1);
     return (
         <GalleryContainer isThumbnail={isThumbnail} isSinglePage={isSinglePage} >
             {
-                items.map( (item, i) => (
+                removedItems.map( (item, i) => (
                     isSinglePage ? (
                         <GalleryItemSingle 
                             key={i} 
@@ -127,7 +128,7 @@ const GalleryItemSingle = styled.div`
         &:nth-child(9n + 9 ) {
             transform: scale(0.8) translate(-27%,-5%);
         }
-        
+
     }
 
 

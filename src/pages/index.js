@@ -62,11 +62,6 @@ export default IndexPage
 export const query = graphql`
   query GalleryIQuery {
     contentfulGallery(galleryName: {eq: "Gallery I"}) {
-      coverImage {
-        fluid(maxWidth: 1200) {
-          ...GatsbyContentfulFluid_noBase64
-        }
-      }
       images {
         fluid(maxHeight: 1200, quality: 100) {
           ...GatsbyContentfulFluid_noBase64

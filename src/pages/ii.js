@@ -63,11 +63,6 @@ export default II;
 export const query = graphql`
   query GalleryIIQuery {
     contentfulGallery(galleryName: {eq: "Gallery II"}) {
-      coverImage {
-        fluid(maxWidth: 1200) {
-          ...GatsbyContentfulFluid_noBase64
-        }
-      }
       images {
         fluid(maxHeight: 1200, quality: 100) {
           ...GatsbyContentfulFluid_noBase64
