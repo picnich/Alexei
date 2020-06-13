@@ -50,6 +50,7 @@ const II = ({ data }) => {
                     current={images[currentImg]}
                     handleNext={handleNext}
                     handlePrevious={handlePrevious}
+                    isDouble={true}
                 /> 
                 )
             }
