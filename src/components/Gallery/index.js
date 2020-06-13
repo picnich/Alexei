@@ -127,11 +127,7 @@ const GalleryItemSingle = styled.div`
         &:nth-child(9n + 9 ) {
             transform: scale(0.8) translate(-27%,-5%);
         }
-
-
-
-
-
+        
     }
 
 
