@@ -78,7 +78,10 @@ const ImageContainer = styled.div`
         width: 660px;
       }  
       @media screen and (min-width: 1280px) {
-        width: ${ props => props.isDouble ? "1080px" : "980px"};
+        width: ${ props => props.isDouble ? "900px" : "800px"};
+      }  
+      @media screen and (min-width: 1440px) {
+        width: ${ props => props.isDouble ? "1200px" : "920px"};
       }  
   }
 `
