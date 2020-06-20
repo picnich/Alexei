@@ -55,13 +55,16 @@ export default Layout
 const ThumbnailSwitcher = styled.div`
     font-family: "Anaheim";
     text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 2px;
     margin: 0;
     padding-bottom: 10px;
     display: none;
     @media screen and (min-width: 600px) {
         display: block;
+    }
+    @media screen and (min-width: 2000px) {
+      font-size: 14px;
     }
 
 
@@ -85,11 +88,20 @@ const HeaderWrapper = styled.div`
   padding: 20px;
 
   @media screen and (min-width: 600px) {
-    height: 80vh;
+    height: 100vh;
     position: fixed;
-    top: 100px;
+    top: 0px;
     left: 5vw;
-    
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 2000px) {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
   }
 `
 const MainContainer = styled.main`
@@ -121,6 +133,9 @@ const MainContainer = styled.main`
     height: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-left: 200px;
+  }
+  @media screen and (min-width: 1200px) {
     margin-left: 300px;
   }
 `

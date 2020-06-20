@@ -3,22 +3,27 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 const Gallery = ({ items, current, handleClick, isThumbnail, isSinglePage }) => {
-    // const removedItems = items.slice(1);
+    const removedItems = items.slice(1);
     return (
         <GalleryContainer isThumbnail={isThumbnail} isSinglePage={isSinglePage} >
             {
-                items.map( (item, i) => (
+                removedItems.map( (item, i) => (
                     isSinglePage ? (
                         <GalleryItemSingle 
                             key={i} 
                             isCurrent={current === i}
-                            onClick={ () => handleClick(i)}
+                            onClick={ () => handleClick(i + 1)}
                             isSinglePage={isSinglePage}
                         >
                             <Img 
                                 key={item.fluid.src}
                                 fluid={item.fluid}
                                 objectFit="contain"
+                                // imgStyle={{
+                                //     objectFit: "contain",
+                                //     objectPosition: "50% 50%",
+                                //     maxHeight: "280px"
+                                // }}
                             />
                             
                         </GalleryItemSingle>
@@ -26,7 +31,7 @@ const Gallery = ({ items, current, handleClick, isThumbnail, isSinglePage }) => 
                         <GalleryItemDouble 
                             key={i} 
                             isCurrent={current === i}
-                            onClick={ () => handleClick(i)}
+                            onClick={ () => handleClick(i + 1)}
                         >
                             <Img 
                                 key={item.fluid.src}
@@ -72,9 +77,9 @@ const GalleryContainer = styled.div`
 `
 
 const GalleryItemSingle = styled.div`
-    &:nth-child(1) {
+    /* &:nth-child(1) {
         display: none;
-    }
+    } */
     width: 100%;
     height: 120px;
     overflow: hidden;
@@ -82,7 +87,7 @@ const GalleryItemSingle = styled.div`
 
     img {
         object-fit: contain !important;
-        max-height: 780px;
+        max-height: 200px;
     }
     @media screen and (min-width: 948px) {
         height: 140px;

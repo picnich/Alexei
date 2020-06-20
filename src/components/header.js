@@ -35,12 +35,15 @@ const HeaderStyled = styled.header`
   }
 
   h1 { 
-    font-size: 15px;
+    font-size: 12px;
     letter-spacing: 4px;
     font-weight: 400;
     text-transform: uppercase;
     font-family: "Anaheim";
     z-index: 12;
+    @media screen and (min-width: 2000px) {
+      font-size: 14px;
+    }
     a {
       color: #424141;
       text-decoration: none;

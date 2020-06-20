@@ -54,10 +54,13 @@ const ImageContainer = styled.div`
         width: 660px;
       }  
       @media screen and (min-width: 1280px) {
-        width: ${ props => props.isDouble ? "900px" : "800px"};
+        width: ${ props => props.isDouble ? "900px" : "740px"};
       }  
       @media screen and (min-width: 1440px) {
-        width: ${ props => props.isDouble ? "1200px" : "920px"};
+        width: ${ props => props.isDouble ? "1200px" : "740px"};
+      }  
+      @media screen and (min-width: 2000px) {
+        width: 940px;
       }  
   }
 `
