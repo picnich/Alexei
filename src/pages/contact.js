@@ -36,7 +36,11 @@ const Container = styled.div`
 
 const Row = styled.a`
     margin-bottom: 10px;
-    display: block;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: #424141;
     text-decoration: none;
     transition: opacity 0.24 ease-in;
@@ -48,8 +52,8 @@ const Row = styled.a`
 
     svg {
         margin-right: 8px;
-        position:relative;
-        top: 2px;
+        /* position:relative;
+        top: 2px; */
     }
 
 `

@@ -55,7 +55,7 @@ export default Layout
 const ThumbnailSwitcher = styled.div`
     font-family: "Anaheim";
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 2px;
     margin: 0;
     padding-bottom: 10px;
@@ -64,7 +64,7 @@ const ThumbnailSwitcher = styled.div`
         display: block;
     }
     @media screen and (min-width: 2000px) {
-      font-size: 14px;
+      font-size: 12px;
     }
 
 
@@ -96,13 +96,13 @@ const HeaderWrapper = styled.div`
     padding-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
-  @media screen and (min-width: 2000px) {
+  /* @media screen and (min-width: 2000px) {
     padding-top: 20vh;
     padding-bottom: 20vh;
-  }
+  } */
 `
 const MainContainer = styled.main`
   /* padding-right: 10vw; */
@@ -131,8 +131,8 @@ const MainContainer = styled.main`
 
   @media screen and (min-width: 600px) {
     height: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     margin-left: 200px;
   }
   @media screen and (min-width: 1200px) {

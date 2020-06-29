@@ -54,13 +54,13 @@ export const Menu = styled.ul`
 
         a {
             color: #424141;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: normal;
             letter-spacing: 2px;
             text-decoration: none;
             transition: opacity 0.24 ease-in;
             @media screen and (min-width: 2000px) {
-                font-size: 14px;
+                font-size: 12px;
             }
 
             &:hover {

@@ -3,12 +3,12 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 
-const ImageCarousel = ({ current, handleNext, handlePrevious, isDouble }) => {
+const ImageCarousel = ({ current, handleNext, handlePrevious, isDouble, isCover, isLast }) => {
     return (
         <Container className="imageCarousel" isDouble={isDouble}>
             <Next onClick={handleNext} />
             <Previous onClick={handlePrevious}/>
-            <ImageContainer isDouble={isDouble}>
+            <ImageContainer isDouble={isDouble} isCover={isCover} isLast={isLast}>
                 <Img 
                     key={current.fluid.src}
                     fluid={current.fluid} 
@@ -54,13 +54,14 @@ const ImageContainer = styled.div`
         width: 660px;
       }  
       @media screen and (min-width: 1280px) {
-        width: ${ props => props.isDouble ? "900px" : "740px"};
+        width: ${ props => props.isDouble ? "900px" : "720px"};
       }  
       @media screen and (min-width: 1440px) {
-        width: ${ props => props.isDouble ? "1200px" : "740px"};
+        width: ${ props => props.isDouble && props.isCover ? "720px" : props.isDouble ? "1200px" : "720px"};
       }  
       @media screen and (min-width: 2000px) {
-        width: 940px;
+        /* width: 940px; */
+        width: ${ props => props.isDouble && props.isCover ? "740px" : props.isLast ? "2200px" : props.isDouble ? "1600px" : "740px"};
       }  
   }
 `

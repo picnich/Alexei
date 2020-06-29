@@ -41,9 +41,9 @@ const HeaderStyled = styled.header`
     text-transform: uppercase;
     font-family: "Anaheim";
     z-index: 12;
-    @media screen and (min-width: 2000px) {
-      font-size: 14px;
-    }
+    /* @media screen and (min-width: 2000px) {
+      font-size: 12px;
+    } */
     a {
       color: #424141;
       text-decoration: none;

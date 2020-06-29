@@ -51,6 +51,8 @@ const II = ({ data }) => {
                     handleNext={handleNext}
                     handlePrevious={handlePrevious}
                     isDouble={true}
+                    isCover={currentImg === 0}
+                    isLast={currentImg === images.length - 1}
                 /> 
                 )
             }
