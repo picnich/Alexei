@@ -55,7 +55,7 @@ export default Layout
 const ThumbnailSwitcher = styled.div`
     font-family: "Anaheim";
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2px;
     margin: 0;
     padding-bottom: 10px;

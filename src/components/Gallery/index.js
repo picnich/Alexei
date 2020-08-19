@@ -53,7 +53,7 @@ export default Gallery;
 const GalleryContainer = styled.div`
     display: grid;
     /* grid-template-columns: repeat(3, 220px); */
-    height: ${ props => props.isSinglePage ? "100%" : "50%"};;
+    height: ${ props => props.isSinglePage ? "100%" : "50%"};
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -68,10 +68,11 @@ const GalleryContainer = styled.div`
     }
     @media screen and (min-width: 948px) {
         grid-template-columns: repeat(3, 180px);
+        grid-template-columns: ${props => props.isSinglePage ? `repeat(3, 180px)` : `repeat(2, 180px)`};
     }
     @media screen and (min-width: 1060px) {
         /* grid-template-columns: repeat(3, 220px); */
-        grid-template-columns: repeat(3, 280px);
+        grid-template-columns: ${props => props.isSinglePage ? `repeat(3, 280px)` : `repeat(2, 320px)`};
         grid-gap: 24px;
     }
 `
@@ -159,7 +160,7 @@ const GalleryItemDouble = styled.div`
         height: 140px;
     }
     @media screen and (min-width: 1060px) {
-        height: 100px;
+        height: 160px;
 
         /* 1/9 */
         /* First of Three Rows */
@@ -170,29 +171,29 @@ const GalleryItemDouble = styled.div`
             transform: scale(.95) translate(-30%,-15%);
         }
         &:nth-child(9n + 4 ) {
-            transform: scale(1.2) translate(-15%,-4%);
+            transform: scale(1.2) translate(-25%,-4%);
         }
         &:nth-child(9n + 5 ) {
-            transform: scale(1.1) translate(-5%,-15%);
+            transform: scale(1.1) translate(-17%,-15%);
         }
         &:nth-child(9n + 6 ) {
-            transform: scale(1.2) translate(10%,-10%);
+            transform: scale(0.95) translate(10%,-10%);
         }
         &:nth-child(9n + 7 ) {
-            transform: scale(.95) translate(25%,-4%);
+            transform: scale(1.25) translate(12%,-4%);
         }
 
         &:nth-child(9n + 8 ) {
-            transform: scale(1.1) translate(-15%,-25%);
+            transform: scale(1.1) translate(-15%,-15%);
         }
         &:nth-child(9n + 9 ) {
             transform: scale(.95) translate(-20%,-15%);
         }
         &:nth-child(9n + 10 ) {
-            transform: scale(1.2) translate(-15%,-4%);
+            transform: scale(1.2) translate(-8%,-4%);
         }
         &:nth-child(9n + 11 ) {
-            transform: scale(1.2) translate(-15%,-24%);
+            transform: scale(1.2) translate(5%,-24%);
         }
 
     }

@@ -38,8 +38,13 @@ const ImageContainer = styled.div`
     /* position: relative;
     top: 50%;
     transform: translateY(-50%); */
-    max-height: 640px;
+    max-height: 580px;
     overflow: hidden;
+    
+    @media screen and (min-width: 2000px) {
+      max-height: 640px;
+    }
+
 
     .gatsby-image-wrapper {
       width: 300px;   
@@ -54,11 +59,12 @@ const ImageContainer = styled.div`
         width: 660px;
       }  
       @media screen and (min-width: 1280px) {
-        width: ${ props => props.isDouble ? "900px" : "720px"};
+        /* width: ${ props => props.isDouble ? "900px" : "720px"}; */
+        width: ${ props => props.isDouble && props.isCover ? "648px" : props.isDouble ? "1080px" : "648px"};
+        max-height: inherit;
       }  
-      @media screen and (min-width: 1440px) {
-        width: ${ props => props.isDouble && props.isCover ? "720px" : props.isDouble ? "1200px" : "720px"};
-      }  
+      /* @media screen and (min-width: 1440px) {
+      }   */
       @media screen and (min-width: 2000px) {
         /* width: 940px; */
         width: ${ props => props.isDouble && props.isCover ? "740px" : props.isLast ? "2200px" : props.isDouble ? "1600px" : "740px"};

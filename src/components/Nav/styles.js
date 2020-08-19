@@ -54,7 +54,7 @@ export const Menu = styled.ul`
 
         a {
             color: #424141;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: normal;
             letter-spacing: 2px;
             text-decoration: none;
