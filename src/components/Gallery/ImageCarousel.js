@@ -38,7 +38,8 @@ const ImageContainer = styled.div`
     /* position: relative;
     top: 50%;
     transform: translateY(-50%); */
-    max-height: 580px;
+    max-height: 340px;
+    max-height: ${props => props.isCover ? "520px" : props.isDouble ? "340px" : "520px"};
     overflow: hidden;
     
     @media screen and (min-width: 2000px) {
@@ -58,10 +59,13 @@ const ImageContainer = styled.div`
       @media screen and (min-width: 980px) {
         width: 660px;
       }  
-      @media screen and (min-width: 1280px) {
+      @media screen and (min-width: 1080px) {
+        width: ${ props => props.isDouble && props.isCover ? "648px" : props.isDouble ? "860px" : "648px"};
+        max-height: inherit;
+      }  
+      @media screen and (min-width: 1400px) {
         /* width: ${ props => props.isDouble ? "900px" : "720px"}; */
         width: ${ props => props.isDouble && props.isCover ? "648px" : props.isDouble ? "1080px" : "648px"};
-        max-height: inherit;
       }  
       /* @media screen and (min-width: 1440px) {
       }   */
