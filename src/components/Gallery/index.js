@@ -168,7 +168,8 @@ const GalleryItemDouble = styled.div`
             transform: scale(1.1) translate(-20%,-10%);
         }
         &:nth-child(9n + 3 ) {
-            transform: scale(.95) translate(-30%,-15%);
+            /* transform: scale(.95) translate(-30%,-15%); */
+            transform: scale(1.35) translate(-2%,-2%);
         }
         &:nth-child(9n + 4 ) {
             transform: scale(1.2) translate(-25%,-4%);
